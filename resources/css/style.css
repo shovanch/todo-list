@@ -1,0 +1,21 @@
+/* -- Base Styles  ---------- */
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+h1 {
+  color: red;
+}
+
+/* -- Layout Styles  ---------- */
+/* -- Modules Styles  ---------- */
+
+/*# sourceMappingURL=data:application/json;charset=utf8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInBhcnRpYWxzL19iYXNlLnNjc3MiLCJwYXJ0aWFscy9fbGF5b3V0LnNjc3MiLCJwYXJ0aWFscy9fbW9kdWxlcy5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBLGdDQUFnQztBQUNoQztFQUNFLCtCQUFzQjtVQUF0Qix1QkFBc0I7Q0FDdkI7O0FBRUQ7OztFQUdFLDRCQUFtQjtVQUFuQixvQkFBbUI7Q0FDcEI7O0FBRUQ7RUFDRSxXQUFVO0NBQ1g7O0FDYkQsa0NBQWtDO0FDQWxDLG1DQUFtQyIsImZpbGUiOiJzdHlsZS5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIvKiAtLSBCYXNlIFN0eWxlcyAgLS0tLS0tLS0tLSAqL1xyXG5odG1sIHtcclxuICBib3gtc2l6aW5nOiBib3JkZXItYm94O1xyXG59XHJcblxyXG4qLFxyXG4qOjpiZWZvcmUsXHJcbio6OmFmdGVyIHtcclxuICBib3gtc2l6aW5nOiBpbmhlcml0O1xyXG59XHJcblxyXG5oMSB7XHJcbiAgY29sb3I6IHJlZDtcclxufVxyXG4iLCIvKiAtLSBMYXlvdXQgU3R5bGVzICAtLS0tLS0tLS0tICovIiwiLyogLS0gTW9kdWxlcyBTdHlsZXMgIC0tLS0tLS0tLS0gKi8iXX0= */

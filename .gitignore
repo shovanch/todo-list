@@ -16,8 +16,12 @@ $RECYCLE.BIN/
 
 # Windows shortcuts
 *.lnk
+
+#Custom Ignore
 resources/fonts
 node_modules
+.stylelintrc.json
+eslintrc.json
 
 # =========================
 # Operating System Files
