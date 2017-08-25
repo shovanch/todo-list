@@ -21,7 +21,7 @@ $RECYCLE.BIN/
 resources/fonts
 node_modules
 .stylelintrc.json
-eslintrc.json
+/eslintrc.json
 
 # =========================
 # Operating System Files

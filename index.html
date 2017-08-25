@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -7,10 +8,36 @@
     <link rel=stylesheet href="resources/css/normalize.min.css">
     <link rel=stylesheet href="resources/css/style.css">
 
-    <title>Document</title>
+    <title>TodoList</title>
 </head>
-<body>
-    <h1>ToDo List</h1>
-</body>
-</html>
 
+<body>
+    <div class="main-container">
+        <div class="header">
+            <h1 id="day"></h1>
+            <h2 id="date"></h2>
+        </div>
+        <div class="list-area">
+            <input type="text" name="name" placeholder="Add new todo ">
+            <ul id="todolist">
+            </ul>
+            
+        </div>
+    </div>
+
+    <!-- Trying checkbox -->
+    <!-- <div>
+        <input type="checkbox" class="cbx-custom" id="cbx">
+        <label for="cbx" class="cbx-custom-label">Todo Task 1</label>
+        <button>click</button>
+    </div> -->
+
+
+
+
+
+
+    <script src="resources/js/main.js"></script>
+</body>
+
+</html>
