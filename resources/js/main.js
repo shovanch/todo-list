@@ -37,7 +37,7 @@ todoInput.addEventListener('keyup', function (e) {
 
 // toggle done and delete todo
 li.addEventListener('click', function (e) {
-  if (e.target.tagName === 'LI') {
+  if (e.target.tagName === 'SPAN') {
     e.target.classList.toggle('done');
   }
   if (e.target.tagName === 'BUTTON') {
@@ -46,7 +46,7 @@ li.addEventListener('click', function (e) {
     ul.removeChild(list);
   }
   // prints out number of done todos
-  const lis = ul.children;
+  const lis = li.children.children;
   let count = 0;
   for (let i = 0; i < lis.length; i++) {
     let lists = lis[i];
