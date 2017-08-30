@@ -9,7 +9,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 38rem;
+  width: 40rem;
   margin-top: 10%;
   background: $slight-white;
 }
@@ -22,6 +22,7 @@
 li {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 footer {
