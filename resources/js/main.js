@@ -92,7 +92,6 @@ ul.addEventListener('click', function (e) {
     } else {
       counter.innerHTML = count + ' items left';
     }
-
     listFooter.appendChild(counter);
 
     deleteAll.textContent = 'Clear Completed';
@@ -109,9 +108,26 @@ ul.addEventListener('click', function (e) {
     const mainLi = list.parentNode;
 
     // if done, then decrement
-    if (list.className !== 'done') {
+    if (list.className === '') {
       count--;
     }
+
+    // Set the content of counter span element
+    if (count === 0) {
+      counter.innerHTML = 'All tasks done';
+    } else {
+      counter.innerHTML = count + ' items left';
+    }
+
+    listFooter.appendChild(counter);
+
+    deleteAll.textContent = 'Clear Completed';
+    deleteAll.style.visibility = 'visible';
+    listFooter.appendChild(deleteAll);
+
+    ul.appendChild(listFooter);
+
+    
     mainLi.removeChild(list);
   }
 });
