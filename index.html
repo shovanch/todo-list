@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TodoList</title>
 
   <!-- Font import -->
   <link href="https://fonts.googleapis.com/css?family=Roboto:500,700" rel="stylesheet">
@@ -12,8 +12,6 @@
   <!-- Stylesheets import -->
   <link rel=stylesheet href="resources/css/normalize.min.css">
   <link rel=stylesheet href="resources/css/style.css">
-
-  <title>TodoList</title>
 </head>
 
 <body>
@@ -22,20 +20,26 @@
       <div class="header">
         <h1 id="day"></h1>
         <h2 id="date"></h2>
-      </div>
+      </div> <!--Header to show the current day and date-->
+
       <div class="list-area">
-        <input type="text" name="name" placeholder="Add new todo ">
+        <input type="text" name="name" placeholder="Add new todo" autocomplete="off">
         <ul id="todoList">
-          <!-- <li><label>one</label><button class="deleteButton"></button></li>
-          <li><label class="done">two</label><button class="deleteButton"></button></li>
-          <span>You have 1 items to do</span>
-          <button class="deleteAllBtn" style="visibility: visible;">Clear Completed</button> -->
         </ul>
+      </div> <!-- The main list area- input & display-->
 
-      </div>
     </div>
-  </div>
-
+  </div> <!-- main flex container -->
+  
+  <footer>
+    <h3>Designed and Coded by Shovan Chatterjee</h3>
+    <a href="https://twitter.com/shovan_ch" target="_blank">
+        <img src="resources/img/twitter.svg" alt="">
+    </a>
+    <a href="https://github.com/shovanch" target="_blank">
+      <img src="resources/img/github.svg" alt="">
+    </a>
+  </footer>
 
   <script src="resources/js/main.js"></script>
 </body>

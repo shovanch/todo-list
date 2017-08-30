@@ -1,4 +1,6 @@
-// Variable Declarations
+/*
+  Variable Declarations
+*/
 const localDay = document.getElementById('day');
 const localDate = document.getElementById('date');
 const todoInput = document.querySelector('input');
@@ -9,6 +11,7 @@ const counter = document.createElement('span');
 let count = 0; // Global counter Variable for todo count tracking
 let ulChilds = ul.children;
 const listFooter = document.createElement('div');
+let flag = 0;
 
 // Function to display date and time using Date() objecy
 function showDate () {
@@ -30,6 +33,7 @@ localDate.innerHTML = showDate();
 */
 todoInput.addEventListener('keyup', function (e) {
   if (e.keyCode === 13) {
+    // create the element to be inserted
     const li = document.createElement('li');
     const label = document.createElement('label');
     const button = document.createElement('button');
@@ -40,20 +44,24 @@ todoInput.addEventListener('keyup', function (e) {
     label.textContent = text;
     li.appendChild(label);
 
-     // increment count if new todo is added
-
     button.className = 'deleteButton';
     li.appendChild(button);
 
     listFooter.className = 'listFooter';
 
+    // increment count by one
     count++;
     counter.innerHTML = count + ' items left';
     listFooter.appendChild(counter);
 
+    // If there is no done todos yet, hide deleteALl button
     deleteAll.textContent = 'Clear Completed';
-    if (count === 0) 
-    deleteAll.style.visibility = 'hidden';
+    if (flag === 0) {
+      deleteAll.style.visibility = 'hidden';
+    } else {
+      deleteAll.style.visibility = 'visible';
+    }
+
     listFooter.appendChild(deleteAll);
 
     ul.appendChild(li);
@@ -72,10 +80,13 @@ ul.addEventListener('click', function (e) {
     // decrement or increment, depending on toggle class
     if (e.target.parentNode.className === 'done') {
       count--;
+      flag++;
     } else {
       count++;
+      flag--;
     }
 
+    // Set the content of counter span element
     if (count === 0) {
       counter.innerHTML = 'All tasks done';
     } else {
@@ -107,7 +118,7 @@ ul.addEventListener('click', function (e) {
 
 // on the clear Completed button, to clear all Completed todos
 deleteAll.addEventListener('click', function () {
-  for (let i = 0; i < ulChilds.length - 1; i++) {
+  for (let i = 0; i < ulChilds.length; i++) {
     let listElem = ulChilds[i];
     if (listElem.className === 'done') {
       ul.removeChild(listElem);

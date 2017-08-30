@@ -11,46 +11,44 @@ html {
   box-sizing: inherit;
 }
 
-// * {outline : 1px solid red; }
+body {
+  background: $pink;
+}
 
 li {
+  padding: 1rem;
   list-style-type: none;
 }
 
 label {
   cursor: pointer;
 }
+
 ul {
+  width: 30rem;
   padding-left: 0;
-  
 }
+
 input,
 button {
- 
-  border: none;
+  border: 0;
 }
+
 button {
   background: none;
   cursor: pointer;
 }
 
-body {
-  background: $pink;
-}
-
-ul {
-  width: 300px;
-}
-
 input {
+  margin-bottom: 1rem;
   padding: 1rem 1.5rem;
+  border: 1px solid #bdbdbd;
+  border-radius: 4%;
+  background: transparent;
 }
 
-li {
+a {
+  width: 20px;
+  height: 20px;
   padding: 1rem;
 }
-
-li:first-child {
-  margin-top: 1rem;
-}
-
