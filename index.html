@@ -17,22 +17,25 @@
 </head>
 
 <body>
-  <div class="main-container">
-    <div class="header">
-      <h1 id="day"></h1>
-      <h2 id="date"></h2>
-    </div>
-    <div class="list-area">
-      <input type="text" name="name" placeholder="Add new todo ">
-      <ul id="todoList">
-        <li><label>one</label><button class="deleteButton">Done?</button></li>
-        <li><label>two</label><button class="deleteButton">Done?</button></li>
-        <span>You have 1 items to do</span>
-        <button class="deleteAllBtn" style="visibility: visible;">Clear Completed</button>
-      </ul>
+  <div class="flex-contain">
+    <div class="main-container">
+      <div class="header">
+        <h1 id="day"></h1>
+        <h2 id="date"></h2>
+      </div>
+      <div class="list-area">
+        <input type="text" name="name" placeholder="Add new todo ">
+        <ul id="todoList">
+          <!-- <li><label>one</label><button class="deleteButton"></button></li>
+          <li><label class="done">two</label><button class="deleteButton"></button></li>
+          <span>You have 1 items to do</span>
+          <button class="deleteAllBtn" style="visibility: visible;">Clear Completed</button> -->
+        </ul>
 
+      </div>
     </div>
   </div>
+
 
   <script src="resources/js/main.js"></script>
 </body>

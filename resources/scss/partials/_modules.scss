@@ -1,5 +1,33 @@
 /* -- Modules Styles  ---------- */
-.done {
-  background: goldenrod;
+.header {
+  text-align: center;
+}
+.done > label {
   text-decoration: line-through;
 }
+
+
+.deleteButton::before {
+  content: "✖";
+  background: transparent;
+  cursor: pointer;
+}
+
+
+.deleteAllBtn {
+
+  &:hover {
+    border-bottom: 1px solid #000;
+    padding-bottom: 1px;
+  }
+}
+
+.listFooter {
+  border-top: 1px solid #BDBDBD;
+  padding-top: 1rem;
+  padding-bottom: 0.5rem;
+  margin-top: 1rem;
+  display: flex;
+  justify-content: space-between;
+}
+

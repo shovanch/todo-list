@@ -8,6 +8,8 @@ deleteAll.className = 'deleteAllBtn';
 const counter = document.createElement('span');
 let count = 0; // Global counter Variable for todo count tracking
 let ulChilds = ul.children;
+const listFooter = document.createElement('div');
+
 // Function to display date and time using Date() objecy
 function showDate () {
   var dt = new Date();
@@ -29,24 +31,33 @@ localDate.innerHTML = showDate();
 todoInput.addEventListener('keyup', function (e) {
   if (e.keyCode === 13) {
     const li = document.createElement('li');
+    const label = document.createElement('label');
+    const button = document.createElement('button');
+
     const text = todoInput.value;
     todoInput.value = '';
-    const label = document.createElement('label');
+
     label.textContent = text;
     li.appendChild(label);
-    const button = document.createElement('button');
+
+     // increment count if new todo is added
+
     button.className = 'deleteButton';
-    button.textContent = 'Done?';
     li.appendChild(button);
-    ul.appendChild(li);
 
-    // increment count if new todo is added
+    listFooter.className = 'listFooter';
+
     count++;
-    counter.innerHTML = 'You have ' + count + ' items to do';
-    ul.appendChild(counter);
+    counter.innerHTML = count + ' items left';
+    listFooter.appendChild(counter);
 
-    // append the clear Completed button
-    
+    deleteAll.textContent = 'Clear Completed';
+    if (count === 0) 
+    deleteAll.style.visibility = 'hidden';
+    listFooter.appendChild(deleteAll);
+
+    ul.appendChild(li);
+    ul.appendChild(listFooter);
   }
 });
 
@@ -56,9 +67,7 @@ todoInput.addEventListener('keyup', function (e) {
 ul.addEventListener('click', function (e) {
   // on the todo text, to toggle done
   if (e.target.tagName === 'LABEL') {
-    const span = e.target;
     e.target.parentNode.classList.toggle('done');
-    // span.classList.toggle('done');
 
     // decrement or increment, depending on toggle class
     if (e.target.parentNode.className === 'done') {
@@ -67,21 +76,19 @@ ul.addEventListener('click', function (e) {
       count++;
     }
 
-    
-
-
     if (count === 0) {
-      counter.innerHTML = 'You have no tasks left';
+      counter.innerHTML = 'All tasks done';
     } else {
-      counter.innerHTML = 'You have ' + count + ' items to do';
+      counter.innerHTML = count + ' items left';
     }
-    ul.appendChild(counter);
+
+    listFooter.appendChild(counter);
+
     deleteAll.textContent = 'Clear Completed';
-    deleteAll.style.visibility = 'hidden';
-    if (count > 0) {
-      deleteAll.style.visibility = 'visible';
-    }
-    ul.appendChild(deleteAll);
+    deleteAll.style.visibility = 'visible';
+    listFooter.appendChild(deleteAll);
+
+    ul.appendChild(listFooter);
   }
 
   // on the delete button, to delete individual todo
@@ -95,18 +102,12 @@ ul.addEventListener('click', function (e) {
       count--;
     }
     mainLi.removeChild(list);
-
-    if (count === 0) {
-      counter.innerHTML = 'You have no tasks left';
-    } else {
-      counter.innerHTML = 'You have ' + count + ' items to do';
-    }
   }
 });
 
 // on the clear Completed button, to clear all Completed todos
 deleteAll.addEventListener('click', function () {
-  for (let i = 0; i < ulChilds.length - 2; i++) {
+  for (let i = 0; i < ulChilds.length - 1; i++) {
     let listElem = ulChilds[i];
     if (listElem.className === 'done') {
       ul.removeChild(listElem);

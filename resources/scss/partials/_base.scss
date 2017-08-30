@@ -2,6 +2,7 @@
 
 html {
   box-sizing: border-box;
+  font-size: 62.5%;
 }
 
 *,
@@ -10,17 +11,46 @@ html {
   box-sizing: inherit;
 }
 
-* {outline : 1px solid red; }
+// * {outline : 1px solid red; }
 
 li {
-  background: lightcoral;
   list-style-type: none;
-  padding: 0.5em 1em;
-  position: relative;
 }
 
 label {
   cursor: pointer;
 }
+ul {
+  padding-left: 0;
+  
+}
+input,
+button {
+ 
+  border: none;
+}
+button {
+  background: none;
+  cursor: pointer;
+}
 
+body {
+  background: $pink;
+}
+
+ul {
+  width: 300px;
+}
+
+input {
+  padding: 1rem 1.5rem;
+}
+
+li {
+  padding: 1rem;
+}
+
+li:first-child {
+  margin-top: 1rem;
+}
 

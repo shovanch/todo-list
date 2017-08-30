@@ -1,8 +1,37 @@
 /* Font and typography */
-h1 {
+
+h1,
+h2 {
   font-family: $stack-roboto;
+  color: $slight-gray
 }
 
-label {
+h1 {
+  font-style: bold;
+  font-size: 3.5rem;
+}
+
+h2 {
+  font-style: medium;
+  font-size: 2rem;
+
+}
+
+input {
+  font-size: 1.6rem;
+}
+label,
+span,
+input {
   font-family: $stack-arial;
+  font-style: regular;
+}
+
+span, 
+.deleteAllBtn {
+  font-size: 1.4rem;
+}
+
+li > label {
+  font-size: 1.8rem;
 }
