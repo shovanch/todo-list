@@ -1,9 +1,16 @@
 // Descriptive color variables
+$pink        : #FABFBF;
+$slight-white: #F6EAEA;
+$slight-gray : #423A3A;
 
 // Functional color variables
 
 // Font stacks
+$stack-arial : Arial, sans-serif;
+$stack-roboto: 'Roboto', $stack-arial;
 
 // Asset paths
 
 // Media query breakpoints
+$mq-medium: '(min-width: 768px)';
+$mq-large : '(min-width: 1150px)';

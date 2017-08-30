@@ -10,6 +10,8 @@ html {
   box-sizing: inherit;
 }
 
+* {outline : 1px solid red; }
+
 li {
   background: lightcoral;
   list-style-type: none;
@@ -17,12 +19,8 @@ li {
   position: relative;
 }
 
-span {
+label {
   cursor: pointer;
 }
 
-.done {
-  background: goldenrod;
-  text-decoration: line-through;
-}
 

@@ -1,4 +1,4 @@
-[Todo List project](shovanch.com/todo-list)
+[Todo List project](https://shovanch.com/todo-list)
 ------
 ### Technologies used
 * HTML
